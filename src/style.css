@@ -1,0 +1,230 @@
+ * {
+    box-sizing: border-box;
+    
+  }
+  body{
+    font-family:Arial, Helvetica, sans-serif
+  }
+  .correct{
+    background-color: green;
+  }
+  .close{
+    background-color: yellow;
+  }
+  .wrong{
+    background-color: #ccc;
+  }
+h1{
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: underline;
+}
+.scoreboard {
+  max-width: 295px;
+  width: 100%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 5px;
+}
+.winner{
+  position: absolute;
+  top:500px;
+  left: 500px;
+  font-size: 50px;
+  color:rgb(255, 0, 149);
+  animation: spin 1.5s linear infinite;
+}
+/* rotates clockwise indefinitely */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.scoreboard-letter {
+  height: 45px;
+  width: 45px;
+  font-size: 30px;
+  text-transform: uppercase;
+  border: 3px solid #ccc;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  .box {
+    background-color: #eee1d5;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+  .logotext {
+    background-color: #43281c;
+    text-align: center;
+    color: #eee1d5;
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    font-size: 50%;
+
+    
+  }
+  .logo{
+    width: 23.22px;
+    height: 25px;
+    position: relative;
+    top: 18px;
+  }
+  .slogan{
+    padding-top: 10px;
+    margin-left: 5px;
+  }
+
+  .order{
+    grid-area: order;
+    background-color: #eee1d5;
+    padding: 10px;
+
+  }
+  .payment{
+    grid-area: payment;
+    background-color: #efefef;
+    padding: 10px;
+
+
+  }
+  .total{
+    grid-area: total;
+    background-color: #efefef;
+    padding: 10px;
+
+
+  }
+
+  .page{
+    
+    display: grid;
+    grid-template-areas: "order    payment "
+    "total total ";
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+    row-gap: 30px;
+    column-gap: 30px
+  }
+ 
+  .item-quantity{
+    grid-area: quan;
+   
+  }
+
+  .item{
+    grid-area: item;
+  }
+
+  .price{
+    grid-area: price;
+    padding: 10px;
+  }
+
+  .extra{
+    grid-area: extra;
+    padding: 10px;
+  }
+
+ .items-flex{
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-areas: "quan item price"
+  "quan  extra  price";
+  list-style: none;
+  justify-content: space-between;
+  padding-bottom: 10px;
+
+  
+  &:not(:last-child){
+    border-bottom: 2px solid black;
+  }
+ }
+ 
+
+ .overlay-input-group{
+  position: relative;
+  display: inline-block;
+ }
+ /* label */
+ .user-input-label{ 
+  background-color: #eee1d5;
+  color: black;
+  font-size: 12px;
+  position: absolute;
+  left: 25px;
+  top: -7px;
+  padding: 0 2px;
+ }
+ .user-input {
+  background-color: #eee1d5;
+  border-color: black;
+  width:100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  margin-left: 15px;
+  border-radius: 15px;
+ }
+
+
+ tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+td:last-child{
+  text-align: right;
+}
+tr:last-child{
+  font-weight: bold;
+}
+
+.totals-table {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: gray;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout-button{
+  background-color: #eee1d5;
+  border-radius: 15px;
+  width: 100%;
+  padding:8px;
+  font-size:18px;
+}
+
+.payment-labels{
+  display:flex;
+  flex-direction: column;
+
+}
